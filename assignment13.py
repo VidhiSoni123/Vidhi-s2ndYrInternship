@@ -7,7 +7,24 @@ print(arr)
 print(arr2)
 
 #*interchange
-print(arr.T)
+#print(arr.T)
+import numpy as np
+
+a=np.array([[6, -8, 73, -110],
+            [np.nan, -8, 0, 94],
+            [1,2,3,4],
+            [5,6,7,8]])
+
+print("Original Array:")
+print(a)
+
+a[[0,1,2],:] = a[[2,0,1],:]
+print("\nAfter Row Interchange:")
+print(a)
+
+a[:,[0,1,2]] = a[:,[2,0,1]]
+print("\nAfter Column Interchange:")
+print(a)
 
 #*2) Move axes of 3D array to new positions
 
