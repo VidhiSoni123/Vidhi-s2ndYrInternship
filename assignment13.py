@@ -27,6 +27,17 @@ print("\nAfter Column Interchange:")
 print(a)
 
 #*2) Move axes of 3D array to new positions
+import numpy as np
+
+a=np.array([[6, -8, 73, -110],
+            [np.nan, -8, 0, 94],
+            [1,2,3,4],
+            [5,6,7,8]])
+
+print("Original Array:")
+print(a)
+b=np.moveaxis(a,0,1)
+print("after moving axis",b)
 
 #* 3) Replace NaN values with average of columns 
 arr=np.array([[6, -8, 73, -110], [np.nan, -8, 0, 94]]) 
