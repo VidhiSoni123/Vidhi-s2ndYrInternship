@@ -40,11 +40,23 @@ b=np.moveaxis(a,0,1)
 print("after moving axis",b)
 
 #* 3) Replace NaN values with average of columns 
-arr=np.array([[6, -8, 73, -110], [np.nan, -8, 0, 94]]) 
-avg=6
-arr2=np.nan_to_num(arr,nan=avg)
-print(arr2)
+# arr=np.array([[6, -8, 73, -110], [np.nan, -8, 0, 94]]) 
+# avg=6
+# arr2=np.nan_to_num(arr,nan=avg)
+# print(arr2)
+import numpy as np
 
+a = np.array([[6, -8, 73, -110],
+              [4, -8, 0, 94],
+              [1, 2, 3, 4],
+              [5, 6, 7, 8]])
+
+for i in range(a.shape[0]):
+    for j in range(a.shape[1]):
+        if a[i, j] < 0:
+            a[i, j] = 0
+
+print(a)
 
 
 # 4) Replace negative value with zero in numpy array using replace
