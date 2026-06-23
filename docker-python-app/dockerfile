@@ -1,0 +1,11 @@
+# Base Image
+FROM python:3.12-slim
+
+# Working Directory
+WORKDIR /app
+
+# Copy Python Script
+COPY app.py .
+
+# Run Script when Container Starts
+CMD ["python", "app.py"]
